@@ -1,0 +1,45 @@
+<main class="admin-main">
+    <header class="admin-topbar"><div class="breadcrumb-text">Workspace <span>/</span> <strong>Inquiries</strong></div><div class="topbar-actions"><span class="topbar-date">Tuesday, October 14</span><button class="icon-button" type="button" aria-label="Notifications">♧<span class="notification-dot"></span></button><span class="avatar avatar-indigo topbar-avatar">JD</span></div></header>
+    <div class="admin-content">
+      <div class="page-heading-row">
+        <div><span class="page-eyebrow">CUSTOMER SUPPORT</span><h1>Inquiries <span class="heading-count">24</span></h1><p class="page-subtitle">Keep track of every customer conversation in one place.</p></div>
+        <a class="btn btn-outline-secondary export-button" href="/enquiry-list"><span aria-hidden="true">↓</span> Export</a>
+      </div>
+
+      <section class="metric-grid" aria-label="Inquiry summary">
+        <article class="metric-card"><div class="metric-top"><span>Total inquiries</span><span class="metric-symbol symbol-blue">▤</span></div><div class="metric-value">24</div><div class="metric-foot"><span class="metric-trend">↗ 12%</span> vs. last month</div></article>
+        <article class="metric-card"><div class="metric-top"><span>Needs attention</span><span class="metric-symbol symbol-amber">◷</span></div><div class="metric-value">08</div><div class="metric-foot"><span class="metric-neutral">3 new</span> since yesterday</div></article>
+        <article class="metric-card"><div class="metric-top"><span>In progress</span><span class="metric-symbol symbol-violet">◌</span></div><div class="metric-value">11</div><div class="metric-foot">Across <strong>4 categories</strong></div></article>
+        <article class="metric-card"><div class="metric-top"><span>Resolved</span><span class="metric-symbol symbol-green">✓</span></div><div class="metric-value">05</div><div class="metric-foot"><span class="metric-trend">↗ 8%</span> this month</div></article>
+      </section>
+
+      <section class="data-card">
+        <div class="table-card-heading"><div><h2>All inquiries</h2><p>A clear view of what's happening with your customers.</p></div><a class="btn btn-primary compact-button" href="/home"><span aria-hidden="true">＋</span> New inquiry</a></div>
+        <div class="table-toolbar"><div class="search-control"><span aria-hidden="true">⌕</span><input type="search" aria-label="Search inquiries" placeholder="Search by name, email or ID..."></div><button class="filter-button" type="button"><span aria-hidden="true">☷</span> Filters <span class="filter-count">2</span></button><label class="sr-only" for="statusFilter">Filter by status</label><select class="form-select table-select" id="statusFilter"><option>All statuses</option><option>Open</option><option>In progress</option><option>Resolved</option></select></div>
+        <div class="table-responsive">
+          <table class="table enquiry-table align-middle mb-0">
+            <thead><tr><th scope="col"><input class="form-check-input" type="checkbox" aria-label="Select all inquiries"></th><th scope="col">CUSTOMER</th><th scope="col">CATEGORY</th><th scope="col">SUBMITTED</th><th scope="col">STATUS</th><th scope="col">ASSIGNED TO</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+            <tbody>
+              <tr><td><input class="form-check-input" type="checkbox" aria-label="Select inquiry INQ-024"></td><td><div class="customer-cell"><span class="avatar avatar-coral">SK</span><div><strong>Sophia Kim</strong><span>sophia.kim&#64;acme.co</span></div></div></td><td><span class="category-label"><span class="category-dot dot-blue"></span>Product information</span></td><td><span class="date-primary">Oct 14, 2025</span><span class="date-secondary">10:42 AM</span></td><td><span class="status-pill status-open">●&nbsp; Open</span></td><td><span class="assigned-avatar">JD</span> Jordan D.</td><td><a class="row-action" href="#inquiry-update" aria-label="Update Sophia Kim inquiry">•••</a></td></tr>
+              <tr><td><input class="form-check-input" type="checkbox" aria-label="Select inquiry INQ-023"></td><td><div class="customer-cell"><span class="avatar avatar-sky">MR</span><div><strong>Marcus Reed</strong><span>marcus&#64;reedstudio.com</span></div></div></td><td><span class="category-label"><span class="category-dot dot-purple"></span>Pricing &amp; plans</span></td><td><span class="date-primary">Oct 14, 2025</span><span class="date-secondary">9:18 AM</span></td><td><span class="status-pill status-progress">●&nbsp; In progress</span></td><td><span class="assigned-avatar assignee-lilac">AL</span> Alex L.</td><td><a class="row-action" href="#inquiry-update" aria-label="Update Marcus Reed inquiry">•••</a></td></tr>
+              <tr><td><input class="form-check-input" type="checkbox" aria-label="Select inquiry INQ-022"></td><td><div class="customer-cell"><span class="avatar avatar-mint">AP</span><div><strong>Avery Patel</strong><span>avery.patel&#64;northwind.io</span></div></div></td><td><span class="category-label"><span class="category-dot dot-amber"></span>Technical support</span></td><td><span class="date-primary">Oct 13, 2025</span><span class="date-secondary">4:06 PM</span></td><td><span class="status-pill status-open">●&nbsp; Open</span></td><td><span class="assigned-avatar assignee-rose">—</span> Unassigned</td><td><a class="row-action" href="#inquiry-update" aria-label="Update Avery Patel inquiry">•••</a></td></tr>
+              <tr><td><input class="form-check-input" type="checkbox" aria-label="Select inquiry INQ-021"></td><td><div class="customer-cell"><span class="avatar avatar-sand">JL</span><div><strong>Jamie Lee</strong><span>jamie&#64;brightpath.org</span></div></div></td><td><span class="category-label"><span class="category-dot dot-green"></span>Partnerships</span></td><td><span class="date-primary">Oct 13, 2025</span><span class="date-secondary">1:32 PM</span></td><td><span class="status-pill status-resolved">●&nbsp; Resolved</span></td><td><span class="assigned-avatar">JD</span> Jordan D.</td><td><a class="row-action" href="#inquiry-update" aria-label="Update Jamie Lee inquiry">•••</a></td></tr>
+              <tr><td><input class="form-check-input" type="checkbox" aria-label="Select inquiry INQ-020"></td><td><div class="customer-cell"><span class="avatar avatar-lilac">DT</span><div><strong>Devon Taylor</strong><span>devon.taylor&#64;fable.com</span></div></div></td><td><span class="category-label"><span class="category-dot dot-blue"></span>Product information</span></td><td><span class="date-primary">Oct 12, 2025</span><span class="date-secondary">11:54 AM</span></td><td><span class="status-pill status-progress">●&nbsp; In progress</span></td><td><span class="assigned-avatar assignee-lilac">AL</span> Alex L.</td><td><a class="row-action" href="#inquiry-update" aria-label="Update Devon Taylor inquiry">•••</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-pagination"><span>Showing <strong>1–5</strong> of <strong>24</strong> inquiries</span><div><button type="button" class="page-button" aria-label="Previous page">‹</button><button type="button" class="page-button current-page">1</button><button type="button" class="page-button">2</button><button type="button" class="page-button">3</button><span class="pagination-ellipsis">...</span><button type="button" class="page-button">5</button><button type="button" class="page-button" aria-label="Next page">›</button></div></div>
+      </section>
+
+      <section class="update-card" id="inquiry-update">
+        <div class="update-heading"><div><span class="page-eyebrow">QUICK EDIT</span><h2>Update inquiry <span class="enquiry-reference">INQ-024</span></h2><p>Change the category or status for Sophia Kim's inquiry.</p></div><span class="status-pill status-open">●&nbsp; Open</span></div>
+        <form class="row g-3 align-items-end">
+          <div class="col-md-4"><label class="form-label" for="updateCategory">Category</label><select class="form-select" id="updateCategory"><option selected>Product information</option><option>Pricing &amp; plans</option><option>Technical support</option><option>Partnerships</option></select></div>
+          <div class="col-md-3"><label class="form-label" for="updateStatus">Status</label><select class="form-select" id="updateStatus"><option selected>Open</option><option>In progress</option><option>Resolved</option></select></div>
+          <div class="col-md-3"><label class="form-label" for="updateAssignee">Assigned to</label><select class="form-select" id="updateAssignee"><option selected>Jordan Davis</option><option>Alex Lee</option><option>Unassigned</option></select></div>
+          <div class="col-md-2"><button class="btn btn-primary save-button" type="button">Save changes</button></div>
+        </form>
+      </section>
+      <footer class="admin-footer"><span>© 2025 Northstar Support</span><span>Made for better conversations <span class="footer-heart">♥</span></span></footer>
+    </div>
+</main>

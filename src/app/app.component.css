@@ -1,0 +1,81 @@
+.app-header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid #e9edf2;
+  background: #fff;
+}
+
+.app-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  color: #202c3c;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.app-brand .brand-mark {
+  display: inline-grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 9px;
+  background: #3759d7;
+  color: #fff;
+  font-size: 17px;
+}
+
+.app-brand .brand-period {
+  color: #3759d7;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.app-nav a {
+  padding: 9px 11px;
+  border-radius: 7px;
+  color: #667487;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.app-nav a:hover,
+.app-nav a.active {
+  background: #eef1ff;
+  color: #3e58c7;
+}
+
+@media (max-width: 760px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 17px;
+  }
+
+  .app-nav {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .app-nav a {
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+}

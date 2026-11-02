@@ -1,0 +1,111 @@
+<main class="admin-main">
+  <header class="admin-topbar">
+    <div class="breadcrumb-text">Workspace <span>/</span> <strong>Categories</strong></div>
+    <div class="topbar-actions">
+      <span class="topbar-date">Tuesday, October 14</span>
+      <button class="icon-button" type="button" aria-label="Notifications">♧<span class="notification-dot"></span></button>
+      <span class="avatar avatar-indigo topbar-avatar">JD</span>
+    </div>
+  </header>
+
+  <div class="admin-content">
+    <div class="page-heading-row">
+      <div>
+        <span class="page-eyebrow">WORKSPACE SETTINGS</span>
+        <h1>Categories</h1>
+        <p class="page-subtitle">Create and manage inquiry categories.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <section class="col-12 col-lg-7" aria-labelledby="category-list-heading">
+        <div class="data-card h-100">
+          <div class="table-card-heading">
+            <div>
+              <h2 id="category-list-heading">Category list</h2>
+              <p>View and manage your categories.</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Category ID</th>
+                  <th scope="col">Category name</th>
+                  <th scope="col">Active</th>
+                  <th scope="col" class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Product information</td>
+                  <td><span class="status-pill status-resolved">Active</span></td>
+                  <td class="text-end text-nowrap">
+                    <button class="btn btn-sm btn-outline-primary me-2" type="button">Edit</button>
+                    <button class="btn btn-sm btn-outline-danger" type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Pricing &amp; plans</td>
+                  <td><span class="status-pill status-resolved">Active</span></td>
+                  <td class="text-end text-nowrap">
+                    <button class="btn btn-sm btn-outline-primary me-2" type="button">Edit</button>
+                    <button class="btn btn-sm btn-outline-danger" type="button">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Technical support</td>
+                  <td><span class="status-pill status-open">Inactive</span></td>
+                  <td class="text-end text-nowrap">
+                    <button class="btn btn-sm btn-outline-primary me-2" type="button">Edit</button>
+                    <button class="btn btn-sm btn-outline-danger" type="button">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-pagination">
+            <span>Showing <strong>1–3</strong> of <strong>3</strong> categories</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12 col-lg-5" aria-labelledby="category-form-heading">
+        <div class="card border-warning h-100">
+          <div class="card-header bg-warning text-dark">
+            <h2 class="h6 mb-0" id="category-form-heading">Add / Edit Category</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label" for="categoryId">Category ID</label>
+                <input class="form-control" id="categoryId" name="category" type="number" value="0" readonly>
+                <div class="form-text">0 indicates a new category.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="categoryName">Category name</label>
+                <input class="form-control" id="categoryName" name="categoryName" type="text" placeholder="Enter category name">
+              </div>
+              <div class="form-check form-switch mb-4">
+                <input class="form-check-input" id="isActive" name="isActive" type="checkbox">
+                <label class="form-check-label" for="isActive">Active</label>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-warning" type="button">Save category</button>
+                <button class="btn btn-outline-secondary" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="admin-footer">
+      <span>© 2025 Northstar Support</span>
+      <span>Made for better conversations <span class="footer-heart">♥</span></span>
+    </footer>
+  </div>
+</main>
