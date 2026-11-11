@@ -1,1 +1,29 @@
-<p>crud-practice works!</p>
+<section class="product-panel">
+  <header class="panel-heading">
+    <span class="panel-eyebrow">INVENTORY</span>
+    <h2>Products</h2>
+    <p>Add and manage the products in your catalog.</p>
+  </header>
+
+  <div class="product-entry">
+    <input [(ngModel)]="name" aria-label="Product name" placeholder="Product name">
+    <input [(ngModel)]="price" type="number" min="0" aria-label="Product price" placeholder="Price" />
+    <button class="primary-button" (click)="add()">Add product</button>
+  </div>
+
+  <ul class="product-list">
+    @for (p of products; track p.id) {
+      <li>
+        <div class="product-details">
+          <span class="product-icon" aria-hidden="true">$</span>
+          <span class="product-name">{{p.name}}</span>
+        </div>
+        <span class="product-price">${{p.price}}</span>
+        <button class="delete-button" (click)="remove(p.id)" [attr.aria-label]="'Delete ' + p.name">Delete</button>
+      </li>
+    }
+    @empty {
+      <li class="empty-products">Your products will appear here.</li>
+    }
+  </ul>
+</section>

@@ -1,0 +1,59 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 4% 12%, rgba(232, 238, 255, 0.65), transparent 32%),
+    #f7f8fb;
+}
+
+.workspace {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 34px 0 64px;
+}
+
+.workspace-header {
+  margin-bottom: 30px;
+}
+
+.workspace-header .brand-lockup {
+  margin-bottom: 34px;
+}
+
+.workspace-intro h1 {
+  margin: 10px 0 6px;
+  color: #202d43;
+  font-family: var(--font-display);
+  font-size: clamp(29px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -1.7px;
+}
+
+.workspace-intro p {
+  margin: 0;
+  color: #758297;
+  font-size: 14px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .workspace {
+    width: min(100% - 32px, 560px);
+    padding-top: 22px;
+  }
+
+  .workspace-header .brand-lockup {
+    margin-bottom: 28px;
+  }
+
+  .workspace-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

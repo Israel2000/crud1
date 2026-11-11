@@ -1,0 +1,82 @@
+<section class="enquiry-panel">
+  <header class="panel-heading">
+    <span class="panel-eyebrow">NEW LEAD</span>
+    <h2>Client enquiry</h2>
+    <p>Share a few details and we’ll be in touch soon.</p>
+  </header>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Full name
+      <input type="text" formControlName="name" placeholder="Your name" />
+    </label>
+    @if (form.controls.name.touched && form.controls.name.invalid) {
+      <p class="error">Name is required (at least 2 characters).</p>
+    }
+
+    <label>
+      Email
+      <input type="email" formControlName="email" placeholder="you@example.com" />
+    </label>
+    @if (form.controls.email.touched && form.controls.email.invalid) {
+      <p class="error">Enter a valid email address.</p>
+    }
+
+    <label>
+      Phone (optional)
+      <input type="tel" formControlName="phone" placeholder="Your phone number" />
+    </label>
+    @if (form.controls.phone.touched && form.controls.phone.invalid) {
+      <p class="error">Enter a valid phone number.</p>
+    }
+
+    <label>
+      Service needed
+      <select formControlName="service">
+        <option value="">Choose a service</option>
+        <option value="web-design">Web Design</option>
+        <option value="landing-page">Landing Page</option>
+        <option value="seo">SEO</option>
+        <option value="social-media">Social Media Management</option>
+      </select>
+    </label>
+    @if (form.controls.service.touched && form.controls.service.invalid) {
+      <p class="error">Please choose a service.</p>
+    }
+
+    <label>
+      Budget
+      <select formControlName="budget">
+        <option value="">No preference</option>
+        <option value="under-300">Under $300</option>
+        <option value="300-500">$300 - $500</option>
+        <option value="over-500">Over $500</option>
+      </select>
+    </label>
+
+    <label>
+      Message
+      <textarea formControlName="message" rows="4" placeholder="Tell us a little about your project"></textarea>
+    </label>
+    @if (form.controls.message.touched && form.controls.message.invalid) {
+      <p class="error">Message is required (at least 10 characters).</p>
+    }
+
+    <label class="consent-label">
+      <input type="checkbox" formControlName="consent" />
+      <span>I agree to be contacted about this enquiry</span>
+    </label>
+    @if (form.controls.consent.touched && form.controls.consent.invalid) {
+      <p class="error">You must agree before submitting.</p>
+    }
+
+    <button class="primary-button" type="submit">Send enquiry</button>
+  </form>
+
+  @if (submitted) {
+    <div class="submission-result">
+      <h3>Submitted</h3>
+      <pre>{{ submitted | json }}</pre>
+    </div>
+  }
+</section>
