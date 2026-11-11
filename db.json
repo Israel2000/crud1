@@ -1,0 +1,8 @@
+{
+  "member": { "id": 1, "name": "Alex", "points": 2450 },
+  "rewards": [
+    { "id": 1, "title": "$25 Gift Card", "points": 2000, "category": "Gift Cards", "available": true },
+    { "id": 2, "title": "Free Flight Voucher", "points": 15000, "category": "Travel", "available": true },
+    { "id": 3, "title": "Coffee Mug", "points": 800, "category": "Merchandise", "available": false }
+  ]
+}

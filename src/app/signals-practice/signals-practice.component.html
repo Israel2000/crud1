@@ -1,0 +1,19 @@
+<h2>Signals Practice</h2>
+
+<input
+  #searchBox
+  type="text"
+  placeholder="Search products..."
+  (input)="onSearch(searchBox.value)" />
+
+<p>{{ count() }} products, total ${{ total().toFixed(2) }}</p>
+
+<ul>
+  @for (p of filtered(); track p.id) {
+    <li>{{ p.name }} — ${{ p.price }}</li>
+  } @empty {
+    <li>No products match.</li>
+  }
+</ul>
+
+<button (click)="addMonitorStand()">Add Monitor Stand</button>

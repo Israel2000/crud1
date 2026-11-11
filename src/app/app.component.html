@@ -1,19 +1,18 @@
-<router-outlet></router-outlet>
-<main class="workspace">
-  <header class="workspace-header">
-    <a class="brand-lockup" aria-label="Northstar home">
+<header class="site-header">
+  <div class="site-header-content">
+    <a class="brand-lockup" routerLink="/products" aria-label="Northstar home">
       <span class="brand-mark">N</span>
       Northstar<span class="brand-period">.</span>
     </a>
-    <div class="workspace-intro">
-      <span class="page-eyebrow">YOUR WORKSPACE</span>
-      <h1>Manage your business</h1>
-      <p>Keep products organized and stay on top of new enquiries.</p>
-    </div>
-  </header>
 
-  <div class="workspace-grid">
-    <app-crud-practice></app-crud-practice>
-    <app-enquiry-form />
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Products</a>
+      <a routerLink="/enquiries" routerLinkActive="active">Enquiries</a>
+      <a routerLink="/signals" routerLinkActive="active">Signals</a>
+    </nav>
   </div>
+</header>
+
+<main class="workspace">
+  <router-outlet></router-outlet>
 </main>
